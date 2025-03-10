@@ -27,9 +27,18 @@ function applyGradient() {
 }
 
 function applyRandomImage() {
-    document.body.style.background = `url(https://source.unsplash.com/random/1920x1080)`;
-    document.body.style.backgroundSize = "cover";
-    colorCode.textContent = "Random Image Applied";
+    const img = new Image();
+    img.src = `https://picsum.photos/1920/1080?random=${new Date().getTime()}`;
+    img.onload = () => {
+        document.body.style.backgroundImage = `url(${img.src})`;
+        document.body.style.backgroundSize = "cover";      // Full-screen cover
+        document.body.style.backgroundPosition = "center"; // Center align
+        document.body.style.backgroundRepeat = "no-repeat"; // No repeat
+        document.body.style.height = "100vh";  // Full viewport height
+        document.body.style.width = "100vw";   // Full viewport width
+        document.body.style.overflow = "hidden"; // Hide scrollbars (optional)
+        colorCode.textContent = "Random Image Applied";
+    };
 }
 
 function startAutoChange() {

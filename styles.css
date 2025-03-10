@@ -1,41 +1,106 @@
-/* styles.css */
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Poppins", sans-serif;
     text-align: center;
     transition: background 0.5s ease-in-out;
-}
-.container {
-    margin-top: 50px;
-}
-.buttons button, #copy-btn, #save-btn {
-    margin: 10px;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    background-color: #333;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #1e1e1e;
     color: white;
 }
+
+/* Main Container */
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 600px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Buttons */
+.buttons button, #copy-btn, #save-btn {
+    margin: 10px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+    color: white;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.buttons button:hover, #copy-btn:hover, #save-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Color Display */
 .color-display {
     margin-top: 20px;
-    font-size: 18px;
-    padding: 10px;
-    background: rgba(255,255,255,0.2);
+    font-size: 20px;
+    padding: 12px 24px;
+    background: rgba(255, 255, 255, 0.2);
     display: inline-block;
-    border-radius: 5px;
+    border-radius: 8px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: all 0.3s ease-in-out;
 }
+
+.color-display:hover {
+    transform: scale(1.05);
+}
+
+/* Favorites Section */
 #favorites {
     margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 10px;
 }
+
+/* Favorite Color Box */
 .fav-box {
-    width: 50px;
-    height: 50px;
-    margin: 5px;
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
     cursor: pointer;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.fav-box:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+    
+    .buttons button, #copy-btn, #save-btn {
+        font-size: 14px;
+        padding: 10px 18px;
+    }
+    
+    .fav-box {
+        width: 50px;
+        height: 50px;
+    }
 }
