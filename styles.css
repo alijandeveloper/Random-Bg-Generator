@@ -1,0 +1,41 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    transition: background 0.5s ease-in-out;
+}
+.container {
+    margin-top: 50px;
+}
+.buttons button, #copy-btn, #save-btn {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+}
+.color-display {
+    margin-top: 20px;
+    font-size: 18px;
+    padding: 10px;
+    background: rgba(255,255,255,0.2);
+    display: inline-block;
+    border-radius: 5px;
+}
+#favorites {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.fav-box {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
