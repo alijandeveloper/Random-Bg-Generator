@@ -26,3 +26,9 @@ function applyGradient() {
     colorCode.textContent = `${color1} → ${color2}`;
 }
 
+function applyRandomImage() {
+    document.body.style.background = `url(https://source.unsplash.com/random/1920x1080)`;
+    document.body.style.backgroundSize = "cover";
+    colorCode.textContent = "Random Image Applied";
+}
+
