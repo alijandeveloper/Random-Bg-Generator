@@ -32,3 +32,13 @@ function applyRandomImage() {
     colorCode.textContent = "Random Image Applied";
 }
 
+function startAutoChange() {
+    clearInterval(autoChangeInterval);
+    autoChangeInterval = setInterval(applySolidColor, 2000);
+}
+
+function copyToClipboard() {
+    navigator.clipboard.writeText(colorCode.textContent).then(() => {
+        alert("Copied to clipboard!");
+    });
+}
