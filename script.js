@@ -42,3 +42,20 @@ function copyToClipboard() {
         alert("Copied to clipboard!");
     });
 }
+
+function saveFavorite() {
+    const favColor = document.createElement("div");
+    favColor.classList.add("fav-box");
+    favColor.style.background = document.body.style.background;
+    favColor.addEventListener("click", () => {
+        document.body.style.background = favColor.style.background;
+    });
+    favorites.appendChild(favColor);
+}
+
+solidBtn.addEventListener("click", applySolidColor);
+gradientBtn.addEventListener("click", applyGradient);
+imageBtn.addEventListener("click", applyRandomImage);
+autoBtn.addEventListener("click", startAutoChange);
+copyBtn.addEventListener("click", copyToClipboard);
+saveBtn.addEventListener("click", saveFavorite);
