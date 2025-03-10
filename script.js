@@ -18,3 +18,11 @@ function applySolidColor() {
     document.body.style.background = color;
     colorCode.textContent = color;
 }
+
+function applyGradient() {
+    const color1 = getRandomHexColor();
+    const color2 = getRandomHexColor();
+    document.body.style.background = `linear-gradient(to right, ${color1}, ${color2})`;
+    colorCode.textContent = `${color1} → ${color2}`;
+}
+
